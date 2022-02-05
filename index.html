@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <script type="module" src="./src/contract.js"></script>
+  </head>
+  <body class="bg-blue-500">
+    <div class="grid max-w-screen h-screen bg-blue-400">
+      <div class = "place-self-center">
+        <div id="alert" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+          <span id="alert-txt" class="block sm:inline">Something seriously bad happened.</span>
+          <button id="error" class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <svg class="fill-current h-6 w-6 text-red-500 hover:text-red-300 active:text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+          </button>
+        </div>
+        <h1 id="feeling" class="text-center m-5 font-bold font-sans text-lg text-white">I am feeling ...</h1>
+        <div class="p-5 max-w-sm rounded-md overflow-hidden shadow-md bg-blue-50">
+          <div class="p-4 text-center">
+            <h1 class="font-bold font-sans text-lg">This is my dApp!</h1>
+            <p>Here we can set or get a mood. 😄</p>
+            <form class="my-5">
+              <label for="mood" class="font-mono">input mood:</label> <br />
+              <input id="mood" type="text" class="shadow focus:outline-none focus:ring focus:ring-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-normal focus:shadow-outline" />
+            </form>
+          </div>
+          <div class="flex gap-2 justify-around">
+            <button id="get" class=" bg-yellow-300 hover:bg-yellow-100 active:bg-yellow-300 text-gray-800 font-semibold py-2 px-4 rounded shadow">Get Mood</button>
+            <button id="set" class="bg-green-400 hover:bg-green-200 active:bg-green-400 text-gray-800 font-semibold py-2 px-4 rounded shadow">Set Mood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
