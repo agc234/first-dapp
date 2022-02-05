@@ -8,6 +8,7 @@ try {
 
 	const provider = new ethers.providers.Web3Provider(window.ethereum)
 	const signer = provider.getSigner(window.ethereum.selectedAddress)
+	console.log(signer)
 
 	if (signer._address == null) {
 		throw 300
@@ -57,10 +58,6 @@ try {
 		}
 	]
 
-
-
-
-	console.log(signer)
 	MoodContract = new ethers.Contract(
 		MoodContractAddress,
 		MoodContractABI,
